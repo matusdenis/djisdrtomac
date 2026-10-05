@@ -26,11 +26,12 @@ In **PC streaming** mode the receiver sends H.264 video over USB. Windows can re
 Keep all files in the same folder.
 
 ## Setup
-1. Download: **Code → Download ZIP**, unzip.
-2. These programs are not signed by Apple, so macOS blocks them after download. Open Terminal in the folder and run:
+1. Download: **Code → Download ZIP** and unzip it in **Downloads**. You get the folder `djisdrtomac-main`.
+2. These programs are not signed by Apple, so macOS blocks them after download. Open **Terminal** and paste this command. It only runs inside that folder, and does nothing if the folder isn't found:
    ```bash
-   xattr -dr com.apple.quarantine . && chmod +x dji2obs dji-okno *.command
+   cd ~/Downloads/djisdrtomac-main && xattr -dr com.apple.quarantine . && chmod +x dji2obs dji-okno *.command
    ```
+   If you unzipped it somewhere else, type `cd ` (with a space), drag the folder into the Terminal window, press Enter, then run `xattr -dr com.apple.quarantine . && chmod +x dji2obs dji-okno *.command`.
    Only do this if you trust the files.
 3. Receiver menu: turn on **PC streaming**. It turns itself off after some menu changes or a restart, so check it if nothing appears.
 4. Camera: HDMI output **1080p progressive** (not 1080i). The receiver sends over USB the same frame rate as the camera, for example Sony A7S II = 50p.
@@ -66,11 +67,12 @@ Prijímač **DJI SDR Transmission** ako zdroj obrazu na Macu – v OBS a cez OBS
 - OBS Studio
 
 ## Príprava
-1. Stiahni: **Code → Download ZIP** a rozbaľ.
-2. Programy nie sú podpísané Apple, takže ich macOS po stiahnutí blokuje. V Termináli v priečinku spusti:
+1. Stiahni: **Code → Download ZIP** a rozbaľ ho v priečinku **Stiahnuté** (Downloads). Vznikne priečinok `djisdrtomac-main`.
+2. Programy nie sú podpísané Apple, takže ich macOS po stiahnutí blokuje. Otvor **Terminál** a vlož tento príkaz. Pracuje len v tom priečinku, a ak ho nenájde, nič neurobí:
    ```bash
-   xattr -dr com.apple.quarantine . && chmod +x dji2obs dji-okno *.command
+   cd ~/Downloads/djisdrtomac-main && xattr -dr com.apple.quarantine . && chmod +x dji2obs dji-okno *.command
    ```
+   Ak si ZIP rozbalil inde, napíš `cd ` (s medzerou), pretiahni priečinok do okna Terminálu, stlač Enter a potom spusti `xattr -dr com.apple.quarantine . && chmod +x dji2obs dji-okno *.command`.
    Urob to len vtedy, ak súborom dôveruješ.
 3. Prijímač: v menu zapni **PC streaming**. Po niektorých zmenách v menu alebo po reštarte sa sám vypne, takže ak sa nič neobjaví, skontroluj ho.
 4. Kamera: HDMI výstup **1080p progresívne** (nie 1080i). Prijímač posiela cez USB rovnaké fps ako kamera, napríklad Sony A7S II = 50p.
